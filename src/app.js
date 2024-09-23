@@ -1,6 +1,4 @@
 const express = require("express");
-const cors = require('cors');
-app.use(cors());
 require('dotenv').config();
 require("./db/mongoose.js"); //conetar a base dados
 const user = require('./routers/users.js');
