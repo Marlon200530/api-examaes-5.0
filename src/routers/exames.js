@@ -49,6 +49,8 @@ router.post("/users/exames/:identifier/submit", auth, async (req, res) => {
           questionId: question.questionId._id,
           selectedOption: userAnswer.selectedOption,
           correct: isCorrect,
+          opcaoCorrecta:  question.questionId.correction.option,
+          passos:  question.questionId.correction.steps || ''
         });
         console.log(userAnswer.selectedOption);
       }
